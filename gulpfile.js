@@ -12,13 +12,12 @@ gulp.task('babel', function(){
     .pipe(babel({
       presets: ['es2015']
     }))
-    .pipe(sourcemaps.init())   
-    .pipe(concat('main.js'))
+    .pipe(sourcemaps.init()) 
     .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest('_build/assets/js'));
   });
 
-
+//.pipe(concat('main.js'))
 gulp.task('rebuild', function () {
     browserSync.reload();
 });
